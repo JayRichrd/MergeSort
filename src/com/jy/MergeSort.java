@@ -91,8 +91,9 @@ public class MergeSort {
 		// 将临时数组中排好序的数组元素反向拷贝回原来待排序的数组中，并覆盖对应位置的元素
 		// 从临时数组的第一元素开始
 		tempIndex = 0;
-		while (temp <= right)
-			dataWraps[temp++] = tmpArr[tempIndex++];
+		System.arraycopy(tmpArr, 0, dataWraps, temp, tempArrLength);
+		// while (temp <= right)
+		// dataWraps[temp++] = tmpArr[tempIndex++];
 		// 每一趟后都打印出当前的排序结果
 		System.out.println(Arrays.toString(dataWraps));
 
